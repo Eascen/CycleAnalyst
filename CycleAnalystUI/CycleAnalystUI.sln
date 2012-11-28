@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CycleAnalystUI", "CycleAnalystUI\CycleAnalystUI.csproj", "{856EF449-0F7A-4222-B898-C4AE8C099540}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CycleAnalystLib", "CycleAnalystLib\CycleAnalystLib.csproj", "{C30AA9C4-3767-4711-ADB9-E89F2E2C9184}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CycelAnalystTest", "CycelAnalystTest\CycelAnalystTest.csproj", "{6C1112E6-1877-4C8F-8AAE-35B7AACF5245}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{856EF449-0F7A-4222-B898-C4AE8C099540}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{856EF449-0F7A-4222-B898-C4AE8C099540}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{856EF449-0F7A-4222-B898-C4AE8C099540}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{856EF449-0F7A-4222-B898-C4AE8C099540}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C30AA9C4-3767-4711-ADB9-E89F2E2C9184}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C30AA9C4-3767-4711-ADB9-E89F2E2C9184}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C30AA9C4-3767-4711-ADB9-E89F2E2C9184}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C30AA9C4-3767-4711-ADB9-E89F2E2C9184}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C1112E6-1877-4C8F-8AAE-35B7AACF5245}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C1112E6-1877-4C8F-8AAE-35B7AACF5245}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C1112E6-1877-4C8F-8AAE-35B7AACF5245}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C1112E6-1877-4C8F-8AAE-35B7AACF5245}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

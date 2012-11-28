@@ -1,0 +1,122 @@
+0	0	PAhADR	4	Trip Forward Ahrs	0.000001 Ah*
+4	4	NAhADR	4	Trip Regen Ahrs	0.000001 Ah*
+8	8	WAhADR	4	Trip Watt-hrs	0.00001 Wh*
+12	C	HWAhADR	4	Trip Human Watt-hrs	0.00001 Wh*
+16	10	AMaxADR	2	Trip Max Current	0.01 A*
+18	12	AMinADR	2	Trip Min Current	0.01 A*
+20	14	VMinADR	2	Trip Min Voltage	0.01 V
+22	16	DistADR	4	Trip Distance	1 mm
+26	1A	TimeADR	2	Trip Time with Speed > 0	1 Sec
+28	1C	HTimeADR	2	Trip Time with RPM > 0	1 Sec
+30	1E	RevsADR	2	Human Pedal Revolutions	1 Rev
+32	20	SMaxADR	2	Maximum Speed	0.01 kph
+34	22	PolesADR	2	Speedo Number of Poles	1 Pole (low byte only)
+36	24	PASPolesADR	2	PAS Sensor Num. Poles	1 Pole (low byte only)
+38	26	PrefFlagsADR	1	Flag for Preferences	"Bit 7: 1 = RC Pulse, 0 = Voltage Output
+Bit 6: 1 = PAS Polarity Hi, 0 = Lo
+Bit 5: 1 = Quadrature PAS, 0 = not
+Bit 4: Reserved
+Bit 3: 1 = Show Amps, 0 = Show Watts
+Bit 2: 1 = 5Hz Output, 0 = 1Hz
+Bit 1: 1 = miles, 0 = km
+Bit 0: 1 = High Range, 0 = Low Range"
+39	27	PresetADR	1	Current Preset	0-2
+40	28	PresetCntADR	1	Number of Presets Enabled	0-2
+41	29	Pre1NameADR	1	Name for Preset 1	0-5
+42	2A	Pre2NameADR	1	Name for Preset 2	0-5
+43	2B	Pre3NameADR	1	Name for Preset 3	0-5
+44	2C	TotDistADR	4	Lifetime Odometer	0.01 km
+48	30	VThreshADR	2	Voltage Threshold for CA Shutdown	0.01 V
+50	32	SetSpeedADR	2	"Set Speed, Preset 1 "	0.01 kph
+52	34	SetSpeedADR2	2	"Set Speed, Preset 2"	0.01 kph
+54	36	SetSpeedADR3	2	"Set Speed, Preset 3"	0.01 kph
+56	38	SetSpdMinADR	2	"Threshold Speed, Preset 1"	0.01 kph
+58	3A	SetSpdMinADR2	2	"Threshold Speed, Preset 2"	0.01 kph
+60	3C	SetSpdMinADR3	2	"Threshold Speed, Preset 3"	0.01 kph
+62	3E	SetAmpsADR	2	"Set Amps, Preset 1"	0.01 A*
+64	40	SetAmpsADR2	2	"Set Amps, Preset 2"	0.01 A*
+66	42	SetAmpsADR3	2	"Set Amps, Preset 3"	0.01 A*
+68	44	SetWattsADR	2	"Set Watts, Preset 1"	1 W*
+70	46	SetWattsADR2	2	"Set Watts, Preset 2"	1 W*
+72	48	SetWattsADR3	2	"Set Watts, Preset 3"	1 W*
+74	4A	MaxTempADR	2	Max Temperature Setpoint	0.1 Degrees
+76	4C	ThreshTempADR	2	Threshold Temp Setpoint	0.1 Degrees
+78	4E	PSGainADR	2	Proportional Speed Feedback Gain	Default = 0x0D34
+80	50	IntSGainADR	2	Integral Speed Feedback Gain	0-999
+82	52	DSGainADR	2	Differential Speed Feedback Gain	0-999
+84	54	DGainSpanADR	2	Span for Differential Speed Calc 	Should be ~NumPoles / 4
+86	56	IntAGainADR	2	Amps Limit Feedback Gain	0-999
+88	58	IntVGainADR	2	Low Voltage Feedback Gain	0-999
+90	5A	IntWGainADR	2	Watts Limit Feedback Gain	0-999
+92	5C	ThOMaxADR	2	Max Throttle Output	0-0xFFFF = 0-4.99V
+94	5E	ThOMinADR	2	Min Throttle Output	0-0xFFFF = 0-4.99V
+96	60	WheelADR	2	Wheel Circumference	1 mm
+98	62	DispStillADR	2	Display Screen Mask	"Lower 13 bits: 1 = show, 0 = hide"
+100	64	DispMovADR	2	Moving Display Screen Mask	"Lower 13 bits: 1 = show, 0 = hide"
+102	66	RefreshADR	2	Display Averaging Period	"must be b'1', b'11', b'111' etc. to b'11111111'"
+104	68	TrqEnabADR	1	Torque Sensor Enable	"0-2: 0 = Off, 1 = THUN, 2 = Custom"
+105	69	TrqScaleADR	2	Torque Sensor Scale	"Signed Word, +- 0.1 Nm of 5V signal"
+107	6B	TrqOSADR	2	Torque Sensor Offset Voltage	0xFFFF = 4.99V
+109	6D	TOffsetADR	2	Temperature Sensor Offset	0xFFFF = 4.99V
+111	6F	TScaleADR	2	Temperature Sensor Scale	0.1 Degrees / 5V
+113	71	PASStartADR	2	Threshold PAS Period for Start of Pedalling	"0-99, units of 18.18mS"
+115	73	PASStopADR	2	Threshold Time for Pedal Stopping	"0-99, units of 18.18mS"
+117	75	PASLevelADR	2	Proportional Torque Assistance Level	W / Nm*
+119	77	PASOSADR	2	Proportional Torque Starting Point	"Signed Word, +- 0.1 Nm"
+121	79	AuxMinADR	2	Minimum Auxilliary Potentiometer Input	0-0xFFFF = 0-4.99V
+123	7B	AuxMaxADR	2	Max Auxilliaryt Potentiometer Input	0-0xFFFF = 0-4.99V
+125	7D	ThrotMinADR	2	Min Throttle Input	0-0xFFFF = 0-4.99V
+127	7F	ThrotMaxADR	2	Max Throttle Input	0-0xFFFF = 0-4.99V
+129	81	ThrotFaultADR	2	Throttle Fault Voltage	0-0xFFFF = 0-4.99V
+131	83	ThrotRateADR	2	"Throttle Up Ramp, Preset 1"	0.1 Ramp Units
+133	85	ThrotRateADR2	2	"Throttle Up Ramp, Preset 2"	0.1 Ramp Units
+135	87	ThrotRateADR3	2	"Throttle Up Ramp, Preset 3"	0.1 Ramp Units
+137	89	ThrotDRateADR	2	Throttle Down Ramp	0.1 Ramp Units
+139	8B	ThrotModeADR	1	"Input Throttle Mode, Preset 1"	"0=Off, 1=PassThru, 2=Amps, 3=Speed, 4=Power"
+140	8C	ThrotModeADR2	1	"Input Throttle Mode, Preset 2"	"0=Off, 1=PassThru, 2=Amps, 3=Speed, 4=Power"
+141	8D	ThrotModeADR3	1	"Input Throttle Mode, Preset 3"	"0=Off, 1=PassThru, 2=Amps, 3=Speed, 4=Power"
+142	8E	AuxModeADR	1	"Aux Voltage Function, Preset 1"	"0=Off, 1=A limit, 2=Spd Limit, 3=Pwr Limit, 4=Assist Level  "
+143	8F	AuxModeADR2	1	"Aux Voltage Function, Preset 2"	"0=Off, 1=A limit, 2=Spd Limit, 3=Pwr Limit, 4=Assist Level  "
+144	90	AuxModeADR3	1	"Aux Voltage Function, Preset 3"	"0=Off, 1=A limit, 2=Spd Limit, 3=Pwr Limit, 4=Assist Level  "
+145	91	PASModeADR	1	"PAS Mode, Preset 1"	"0=PAS Off, 1=RPM Sensor, 2=Torque Sensor"
+146	92	PASModeADR2	1	"PAS Mode, Preset 2"	"0=PAS Off, 1=RPM Sensor, 2=Torque Sensor"
+147	93	PASModeADR3	1	"PAS Mode, Preset 3"	"0=PAS Off, 1=RPM Sensor, 2=Torque Sensor"
+148	94	ThermModeADR	1	Thermistor Mode Selection	"0=No Temp Sensor, 1=Themistor, 2=Linear"
+149	95	PackCntADR	1	Battery Presets Enabled	0-2
+150	96	PackADR	1	Current Battery Preset	0-2
+151	97	NumCellADR	1	"Cell Count, Battery 1"	0-99
+152	98	NumCellADR2	1	"Cell Count, Battery 2"	0-99
+153	99	NumCellADR3	1	"Cell Count, Battery 3"	0-99
+154	9A	CellChemADR	1	"Cell Chemistry, Battery 1"	"0=LiMn, 1=LiPo, 2=LiFe, 3=SLA, 4=NiMH"
+155	9B	CellChemADR2	1	"Cell Chemistry, Battery 2"	"0=LiMn, 1=LiPo, 2=LiFe, 3=SLA, 4=NiMH"
+156	9C	CellChemADR3	1	"Cell Chemistry, Battery 3"	"0=LiMn, 1=LiPo, 2=LiFe, 3=SLA, 4=NiMH"
+157	9D	CellAhADR	2	"Pack Capacity, Battery 1"	0.01Ah
+159	9F	CellAhADR2	2	"Pack Capacity, Battery 2"	0.01Ah
+161	A1	CellAhADR3	2	"Pack Capacity, Battery 3"	0.01Ah
+163	A3	TAhADR	4	"Life Cycle Amp-Hours, Battery 1"	0.01 Ah
+167	A7	TAhADR2	4	"Life Cycle Amp-Hours, Battery 2"	0.01 Ah
+171	AB	TAhADR3	4	"Life Cycle Amp-Hours, Battery 3"	0.01 Ah
+175	AF	CyclesADR	2	"Total Cycles, Battery 1"	0-9999
+177	B1	CyclesADR2	2	"Total Cycles, Battery 2"	0-9999
+179	B3	CyclesADR3	2	"Total Cycles, Battery 3"	0-9999
+181	B5	RBattADR	2	"Internal Pack Resistance, Battery 1"	0xFFFF = 0.999 mOhm
+183	B7	RBattADR2	2	"Internal Pack Resistance, Battery 2"	0xFFFF = 0.999 mOhm
+185	B9	RBattADR3	2	"Internal Pack Resistance, Battery 3"	0xFFFF = 0.999 mOhm
+187	BB	SetVoltsADR	2	"Low Voltage Cutoff, Battery 1"	0.01 V
+189	BD	SetVoltsADR2	2	"Low Voltage Cutoff, Battery 2"	0.01 V
+191	BF	SetVoltsADR3	2	"Low Voltage Cutoff, Battery 3"	0.01 V
+193	C1	RBattRateADR	2	Rate at which Rbatt is automatically calculated	
+195	C3	DeltaAMinADR	2	Smallest current to display (not implemented)	0.01 A*
+197	C5	SOCADR	4	Battery State of Charge on power-down 	
+201	C9	OutrSetpMask	2	Mask for outer level setup menu (not implemented)	"For each bit 1=show menu item, 0=hide"
+203	CB	InnrSetupMask	13	Mask for all inner setup menu items	"1=Show Menu Item, 0=Hide Menu Item"
+216	D8	MaxSpeedADR	2	Hard Limit for Max Speed Limit	0.01 kph
+218	DA	MaxPowerADR	2	Hard Limit for Max Watts Limit	1 W*
+220	DC	MaxAmpsADR	2	Hard Limit for Max Amps Limit	0.01 A*
+240	F0	RESERVED_ADR	2	Reserved for firmware version	
+242	F2	OffsetHADR	2	Voltage Offset of High Gain Amplifier	
+244	F4	OffsetLADR	2	Voltage Offset of Low Gain Amplifier	
+246	F6	AScaleADR	2	Inverse of Rshunt (InvGain / Rshunt)	
+248	F8	VScaleADR	2	Voltage Calibration Scaling 	Full Scale ADC Voltage in 0.01V
+250	FA	InvGainADR	4	Factory Calibration of Op-Amp Gain	
+254	FE	RatioADR	2	Ratio of High and Low Amplifier Gains	
